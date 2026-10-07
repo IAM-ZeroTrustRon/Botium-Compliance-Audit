@@ -1,11 +1,21 @@
-# Controls & Compliance Checklist
+# Controls and Assurance Matrix
 
-## Controls Assessment (11 of 15 marked No)
-* **Administrative Controls:** Failures in Least Privilege, Disaster Recovery, Password Policies, and Separation of Duties.
-* **Technical Controls:** Failures in IDS, Encryption, and Backups. Firewall and Antivirus are present.
-* **Physical Controls:** Failures in Timekeeping/Access Badges. CCTV, Locks, and Fire Alarms are present.
+**Fictional Botium Toys | October 6, 2026 | Evidence not independently supplied**
 
-## Compliance Best Practices
-* **PCI DSS:** 4 of 4 best practices marked No (No encryption, no isolated CDE).
-* **GDPR:** 3 of 4 best practices marked No (Lacks encryption, data minimization, and consent protocols).
-* **SOC 1/SOC 2:** 3 of 4 best practices marked No (Lacks administrative controls and auditing).
+The original checklist PDF and operating-control records are unavailable. Scenario statements are not verified audit evidence. Earlier totals such as “11 of 15” cannot be reconciled to retained source records and are not used as conformity scores. This scoped matrix is not a reproduction of the original checklist.
+
+Status rules: **Compliant (Evidence Verified)** requires evidence meeting a scoped benchmark; **Non-Compliant (Confirmed Deficiency)** requires evidence of failure against that benchmark; **Pending Verification (Evidence Gap)** means effectiveness is unestablished. “Non-Compliant” refers to the assessed benchmark, not an automatic legal verdict.
+
+| ID / finding | Domain / scenario statement | Objective / NIST CSF 2.0 alignment | Audit artifacts | Satisfactory evidence | Confirmed gap test | Status |
+|---|---|---|---|---|---|---|
+| C01 / A01 | Access and authentication: Least privilege, duty separation and password governance described as absent | PR.AA; Approved minimum access, protected recovery and attributable identities | Role/grant exports, approval records, authentication tests | Approved minimum access, protected recovery and attributable identities | Excessive grants or successful disallowed authentication | Pending Verification (Evidence Gap) |
+| C02 / A02 | Sensitive-data protection: Encryption and payment isolation described as absent | PR.DS / PR.IR; Scoped sensitive data protected; only necessary access permitted | Data flows, storage/key settings, CDE scope and path tests | Scoped sensitive data protected; only necessary access permitted | Unprotected sensitive store or prohibited payment-system path | Pending Verification (Evidence Gap) |
+| C03 / A03 | Recovery: Backups and recovery planning described as absent | PR.IR / RC.RP; Measured restoration, integrity and usability meet approved objectives | Job history, agreed recovery objectives and isolated restore test | Measured restoration, integrity and usability meet approved objectives | Recovery fails an agreed business requirement | Pending Verification (Evidence Gap) |
+| C04 / A04 | Monitoring and response: Logging/IDS described as absent; firewall/antivirus described as present | DE.CM / RS.MA; Relevant events recorded, actionable and routed to an owner | Coverage inventory, settings, event/alert samples and escalation exercise | Relevant events recorded, actionable and routed to an owner | Required event missing or escalation fails during a scoped test | Pending Verification (Evidence Gap) |
+| C05 / A05 | Privacy and supplier governance: Privacy gaps reported; processing, supplier and contractual scope unavailable | GV.SC / GV.PO; Applicable duties established; critical suppliers reviewed and gaps owned | Purpose/data inventory, applicability review, supplier contracts and assurance | Applicable duties established; critical suppliers reviewed and gaps owned | Reviewed evidence fails an applicable scoped obligation | Pending Verification (Evidence Gap) |
+| C06 / A04 | Legacy asset management: Manual legacy-system monitoring described | ID.AM / PR.PS; Supported and owned assets, with approved treatment for exceptions | Asset/support inventory, patch records and exception approvals | Supported and owned assets, with approved treatment for exceptions | Unsupported/unowned exposure outside an approved exception | Pending Verification (Evidence Gap) |
+| C07 / A01 | Facility safeguards: Locks/CCTV/fire alarms described as present; badge safeguards deficient | PR.AA; Restricted areas protected and exceptions reviewed | Visitor/access records and control maintenance checks | Restricted areas protected and exceptions reviewed | Unauthorized entry or failed scoped safeguard | Pending Verification (Evidence Gap) |
+
+PCI DSS/GDPR scope needs review. SOC 1 and SOC 2 are distinct assurance engagements; this exercise provides neither. ISO/IEC 27001 is a management-system standard, not a checklist certification. Sources: [NIST CSF 2.0](https://www.nist.gov/cyberframework), [ISO/IEC 27001:2022](https://www.iso.org/standard/27001). Mappings indicate relevance, not conformity.
+
+[Findings](../findings/audit-findings.md) · [Treatment plan](../recommendations/remediation.md)

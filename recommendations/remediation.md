@@ -1,11 +1,13 @@
-# Mitigation Recommendations
+# Review and Treatment Plan
 
-- **Implement RBAC & Least Privilege:** Restrict system access based on user roles to align with least privilege principles.
+No treatment performed or owners accepted. T0 means authorization, not document publication.
 
-- **Encrypt all customer & payment data:** Ensure all customer data and payment information is encrypted both at rest and in transit to meet PCI DSS and GDPR mandates.
+| Findings | Proposed owner | Priority | Evidence-review target from T0 | Closure decision |
+|---|---|---|---|---|
+| A01 | IT/security lead | P1 | 10 business days | Reviewer accepts approved minimum access, protected recovery and attributable identities |
+| A02 | Data/payment service owner | P1 | 10 business days | Reviewer accepts scoped sensitive data protected; only necessary access permitted |
+| A03 | Operations lead | P1 | 10 business days; proposed exercise within 30 days | Reviewer accepts measured restoration, integrity and usability meet approved objectives |
+| A04 | Security operations lead | P2 | 20 business days | Reviewer accepts relevant events recorded, actionable and routed to an owner |
+| A05 | Privacy/legal and supplier risk leads | P2 | 20 business days | Reviewer accepts applicable duties established; critical suppliers reviewed and gaps owned |
 
-- **Deploy IDS + centralized logging:** Supplement the existing firewall and antivirus with an Intrusion Detection System (IDS) and centralized log management to detect active threats.
-
-- **Create & test a Disaster Recovery Plan:** Draft and test a comprehensive DRP, and implement automated, secure, and encrypted backups for all critical business assets.
-
-- **Establish PCI DSS & GDPR compliance program:** Standardize data privacy policies and isolate the Cardholder Data Environment (CDE).
+Set implementation dates after scope/effort review. Track actions weekly. Confirmed deficiencies require implementation and authorized retest; evidence gaps require assessment before risk acceptance. Actual residual risk remains unassessed. [Audit findings](../findings/audit-findings.md) provide criteria, artifacts and validation decisions.
